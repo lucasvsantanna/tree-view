@@ -1,19 +1,31 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss'
 
 const config: Config = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ['./src/**/*.tsx'],
   theme: {
     extend: {
+      width: {
+        84: '21rem',
+      },
+      height: {
+        57: '14.25rem',
+      },
+      gridTemplateColumns: {
+        app: '30rem 1fr',
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        dark: {
+          blue: '#17192D',
+        },
+        gray: {
+          150: '#E3EAEF',
+        },
+        border: {
+          card: '#D8DFE6',
+        },
       },
     },
   },
   plugins: [],
-};
-export default config;
+}
+export default config
